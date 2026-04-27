@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Loteria</string>
+    <string name="trevo">Trevo de 4 folhas</string>
+    <string name="announcement">Escolha um de 6 a 15 números para o App gerar 60 números. Ganhe com 6, 5 ou 4 acertos.\nSão realizados dois sorteios semanais ara você apostar e torcer para ficar milhonário.</string>
+    <string name="mega_rule">De 6 à 15 números</string>
+    <string name="quantity">Quantos números vai apostar?</string>
+    <string name="bets">Quantidade de apostas</string>
+    <string name="bets_quantity">Quantas apostas irá tentar?</string>
+    <string name="bets_generate">Gerar apostas</string>
+    <string name="error_bets">Máximo número de apostas permitido: 10</string>
+    <string name="errorNumbers">Números devem ser de 6 à 15</string>
+</resources>
