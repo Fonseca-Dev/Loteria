@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.List
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -48,7 +49,7 @@ import kotlin.random.Random
 
 @OptIn(ExperimentalComposeUiApi::class, ExperimentalMaterial3Api::class)
 @Composable
-fun MegaScreen(onClick: (String) -> Unit) {
+fun MegaScreen(onBackClick: () -> Unit, onMenuClick: (String) -> Unit) {
 
 
     Surface(
@@ -60,9 +61,19 @@ fun MegaScreen(onClick: (String) -> Unit) {
             topBar = {
                 TopAppBar(
                     title = { Text("Apostar") },
+                    navigationIcon = {
+                        IconButton(
+                            onClick = onBackClick
+                        ) {
+                            Icon(
+                                imageVector = Icons.Filled.ArrowBack,
+                                contentDescription = ""
+                            )
+                        }
+                    },
                     actions = {
                         IconButton(onClick = {
-                            onClick("megasena")
+                            onMenuClick("megasena")
                         }) {
                             Icon(
                                 imageVector = Icons.Filled.List,
@@ -225,6 +236,6 @@ private fun generateRandomNumbers(qtde: Int): String {
 @Composable
 fun MegaPreview() {
     LoteriaTheme {
-        MegaScreen {}
+        MegaScreen(onBackClick = {}) {}
     }
 }

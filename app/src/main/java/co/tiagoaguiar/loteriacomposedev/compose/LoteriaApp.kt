@@ -41,7 +41,9 @@ fun LoteriaAppNavHost(navController: NavHostController) {
             }
         }
         composable(AppRouter.MEGA_SENA.route) {
-            MegaScreen{
+            MegaScreen(onBackClick = {
+                navController.navigateUp()
+            }) {
                 navController.navigate(AppRouter.BET_LIST_DETAIL.route + "/$it")
             }
         }
