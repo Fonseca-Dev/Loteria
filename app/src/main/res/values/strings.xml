@@ -11,4 +11,5 @@
     <string name="errorNumbers">Números devem ser de 6 à 15</string>
     <string name="good_luck">Boa Sorte :)</string>
     <string name="save">Salvar</string>
+    <string name="list_response"> [%1$d] [%2$s]\n%3$s</string>
 </resources>
