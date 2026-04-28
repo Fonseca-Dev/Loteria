@@ -39,7 +39,7 @@ import kotlin.random.Random
 
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
-fun MegaScreen() {
+fun MegaScreen(onClick: (String) -> Unit) {
 
     val resultsToSave = mutableListOf<String>()
 
@@ -143,14 +143,17 @@ fun MegaScreen() {
             AlertDialog(
                 onDismissRequest = {},
                 confirmButton = {
-                    TextButton(onClick = { showAlertDialog = false }) {
+                    TextButton(onClick = {
+                        showAlertDialog = false
+                        onClick("megasena")
+                    }) {
                         Text(text = stringResource(id = android.R.string.ok))
                     }
                 },
                 dismissButton = {
                     TextButton(onClick = {
                         Thread {
-                            for(res in resultsToSave){
+                            for (res in resultsToSave) {
                                 val bet = Bet(type = "megasena", numbers = res)
                                 db.betDao().insert(bet)
                             }
@@ -188,6 +191,6 @@ private fun generateRandomNumbers(qtde: Int): String {
 @Composable
 fun MegaPreview() {
     LoteriaTheme {
-        MegaScreen()
+        MegaScreen(onClick = { })
     }
 }
