@@ -9,4 +9,6 @@
     <string name="bets_generate">Gerar apostas</string>
     <string name="error_bets">Máximo número de apostas permitido: 10</string>
     <string name="errorNumbers">Números devem ser de 6 à 15</string>
+    <string name="good_luck">Boa Sorte :)</string>
+    <string name="save">Salvar</string>
 </resources>
