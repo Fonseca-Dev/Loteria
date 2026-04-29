@@ -8,8 +8,8 @@ import androidx.room.Query
 interface BetDao {
 
     @Query("SELECT * FROM bet WHERE type = :betType")
-    fun getNumbersByType(betType: String):List<Bet>
+    suspend fun getNumbersByType(betType: String):List<Bet>
 
     @Insert
-    fun insert(bet: Bet)
+    suspend fun insert(bet: Bet)
 }

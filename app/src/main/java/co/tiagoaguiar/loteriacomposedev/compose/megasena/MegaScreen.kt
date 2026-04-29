@@ -216,12 +216,12 @@ fun MegaSenaContentScreen(modifier: Modifier = Modifier) {
             },
             dismissButton = {
                 TextButton(onClick = {
-                    Thread {
+                    /*Thread {
                         for (res in resultsToSave) {
                             val bet = Bet(type = "megasena", numbers = res)
                             db.betDao().insert(bet)
                         }
-                    }.start()
+                    }.start()*/
                     showAlertDialog = false
                 }) {
                     Text(text = stringResource(id = R.string.save))
