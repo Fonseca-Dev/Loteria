@@ -27,7 +27,6 @@ import java.util.Locale
 
 @Composable
 fun BetListDetailScreen(
-    type: String,
     betViewModel: BetListDetailViewModel = viewModel(factory = BetListDetailViewModel.Factory)
 ) {
 
@@ -65,6 +64,6 @@ fun BetListDetailScreen(
 @Composable
 fun BetListDetailScreenPreview() {
     LoteriaTheme {
-        BetListDetailScreen(type = "megasena")
+        BetListDetailScreen()
     }
 }
